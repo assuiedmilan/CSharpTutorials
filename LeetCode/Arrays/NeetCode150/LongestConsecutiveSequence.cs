@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace LeetCode.Arrays.NeetCode150;
+﻿namespace LeetCode.Arrays.NeetCode150;
 
 /*
+ * MEDIUM
+ *
  * Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
  *
  * You must write an algorithm that runs in O(n) time.
@@ -26,29 +25,8 @@ namespace LeetCode.Arrays.NeetCode150;
  */
 public class LongestConsecutiveSequence
 {
-    public int Solution(int[] nums) {
-        var longestStreak = 0;
-
-        HashSet<int> setOfNums = [..nums];
-        
-        foreach (var num in setOfNums)
-        {
-            if (!setOfNums.Contains(num - 1))
-            {
-                var currentNum = num;
-                var currentStreak = 1;
-
-                while (setOfNums.Contains(currentNum + 1))
-                {
-                    currentNum++;
-                    currentStreak++;
-                }
-
-                longestStreak = Math.Max(longestStreak, currentStreak);
-            }
-        }
-        
-        return longestStreak;
-
+    public int Solution(int[] nums)
+    {
+        return 0;
     }
 }

@@ -3,6 +3,8 @@
 namespace LeetCode.Arrays.NeetCode150;
 
 /*
+ * MEDIUM
+ *
  * Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
  *
  * Please implement encode and decode
@@ -28,20 +30,13 @@ namespace LeetCode.Arrays.NeetCode150;
  */
 public class EncodeDecodeString
 {
-    const char k_NonUtf8Character = '\u00C0';
-
     public string Encode(IList<string> strs)
     {
-        return strs.Count == 0 ? null : string.Join(k_NonUtf8Character, strs);
+        return string.Empty;
     }
 
     public List<string> Decode(string s)
     {
-        return s switch
-        {
-            null => [],
-            "" => [""],
-            _ => [..s.Split(k_NonUtf8Character)]
-        };
+        return [];
     }
 }

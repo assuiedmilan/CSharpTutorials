@@ -1,4 +1,4 @@
-﻿using LeetCode.DynamicPrograming.Extras;
+﻿using LeetCode.Arrays.Extras;
 
 namespace Sandbox;
 
@@ -6,10 +6,10 @@ public class Program
 {
     static void Main(string[] args)
     {
-        var pascalTriangle = new PascalTriangleII();
-        const int rows = 40;
-        const int iters = 0;
+        var iters = 0;
+        var testObj = new AdjacentIncreasingSubarraysDetection();
+        var param = new[] {2,5,7,8,9,2,3,4,3,1};
         
-        MeasureExecutionTime.MeasureFor(() => pascalTriangle.Solution(rows), iters, out var timeOne);
+        Console.Out.WriteLine(MeasureExecutionTime.MeasureFor(() => testObj.Solution(param, 3), iters, out var timeOne));
     }
 }

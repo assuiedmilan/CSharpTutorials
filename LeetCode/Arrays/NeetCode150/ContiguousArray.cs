@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace LeetCode.Arrays.NeetCode150;
-
-using NumberOfOnesEncounteredForEachZeroEncountered = int;
-using IndexOfFirstTimeCountOfOnesIsEncountered = int;
+﻿namespace LeetCode.Arrays.NeetCode150;
 
 /*
+ * MEDIUM
+ * 
  * Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
  *
  * Example 1:
@@ -30,31 +27,6 @@ public class ContiguousArray
 {   
     public int Solution(int[] nums)
     {
-        var longestSubArray = 0;
-        var numberOfOnesEncounteredForEachZeroEncountered = 0;
-        var map = new Dictionary<NumberOfOnesEncounteredForEachZeroEncountered, IndexOfFirstTimeCountOfOnesIsEncountered>
-        {
-            [0] = -1 //Initialize first left boundary + take zero based indexing into account for when we will calculate the range: array range between index 0 and n is n + 1.
-        };
-
-        for (var i = 0; i<nums.Length; i++)
-        {
-            numberOfOnesEncounteredForEachZeroEncountered += nums[i] == 1 ? 1:-1;
-            
-            if(map.TryGetValue(numberOfOnesEncounteredForEachZeroEncountered, out var value))
-            {
-                var subArraySize = i - value;
-                if (longestSubArray < subArraySize)
-                {
-                    longestSubArray = subArraySize;
-                }
-            }
-            else
-            {
-                map[numberOfOnesEncounteredForEachZeroEncountered] = i;
-            }
-        }
-
-        return longestSubArray;
+        return 0;
     }
 }

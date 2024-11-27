@@ -1,16 +1,16 @@
 ﻿namespace LeetCode.Arrays.NeetCode150;
 
 /*
+ * EASY
+ *
  * Given an integer array nums, handle multiple queries of the following type:
  *
- *     Calculate the sum of the elements of nums between indices left and right inclusive where left <= right.
+ * Calculate the sum of the elements of nums between indices left and right inclusive where left <= right.
  *
  * Implement the NumArray class:
  *
  *     NumArray(int[] nums) Initializes the object with the integer array nums.
  *     int sumRange(int left, int right) Returns the sum of the elements of nums between indices left and right inclusive (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
- *
- *
  *
  * Example 1:
  *
@@ -39,26 +39,14 @@
  */
 public class ImmutableRangeSumQuery
 {
-    readonly int[] m_PrefixedSums;
-    
+   
     public ImmutableRangeSumQuery(int[] nums)
     {
-        m_PrefixedSums = new int[nums.Length];
-        m_PrefixedSums[0] = nums[0];
 
-        for (var i = 1; i < nums.Length; i++)
-        {
-            m_PrefixedSums[i] = m_PrefixedSums[i - 1] + nums[i];
-        }
     }
 
     public int SumRange(int left, int right)
     {
-        if (left > 0)
-        {
-            return m_PrefixedSums[right] - m_PrefixedSums[left - 1];
-        }
-
-        return m_PrefixedSums[right];
+        return 0;
     }
 }
