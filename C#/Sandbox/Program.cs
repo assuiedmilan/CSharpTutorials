@@ -1,19 +1,24 @@
 ﻿using System.Collections;
-using LeetCode.Bitmasks.Extras;
+using LeetCode.Arrays.Extras;
+using LeetCode.TwoPointers.Extras;
+
+// ReSharper disable ClassNeverInstantiated.Global
+// ReSharper disable UnusedMember.Local
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
 
 namespace Sandbox;
 
 public class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        var testObj = new MinimizeXor();
-        const int firstArg = 3;
-        const int secondArg = 5;
+        var testObj = new MergeSortedArray();
+        var firstArg = new[] { 0, 0, 0 ,0 ,0 };
+        var secondArg = new[] { 1, 2, 3, 4, 5 };
 
-        var x = testObj.Solution(firstArg, secondArg);
+        testObj.Solution(firstArg, 5, secondArg, 5);
         
-        Console.WriteLine(x);
+        Console.WriteLine(firstArg);
     }
     
     static void Print(object result, object expected)
